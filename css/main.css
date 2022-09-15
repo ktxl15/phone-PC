@@ -1,0 +1,751 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	transition: .3s;
+	list-style: none;
+	outline: none;
+	-moz-user-select: none;
+}
+.top{
+	height: 5em;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top_main{
+	height: 3em;
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+}
+.top_left,.top_right{
+	height: 100%;
+	width: 50%;
+	display: flex;
+}
+.top_path{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+.top_path_img{
+	height: 100%;
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top_path_img img{
+	height: 70%;
+	width: 70%;
+	cursor: pointer;
+}
+.top_path:hover{
+	opacity: .7;
+}
+.top_path_main{
+	height: 100%;
+	width: 85%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 1.2em;
+	font-family: papyrus;
+}
+.top_right{
+	justify-content: flex-start;
+	align-items: center;
+}
+.top_right_btn{
+	height: 70%;
+	width: 15%;
+	background-color: steelblue;
+	border-radius: .2em;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .9em;
+	color: white;
+	font-family: times;
+}
+.top_right_btn:hover{
+	background-color: blue;
+	color: silver;
+}
+.top_right_ul{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.top_right_li{
+	font-size: 1.2em;
+	cursor: pointer;
+	font-family: perpetua;
+}
+.top_right_li:hover{
+	opacity: .7;
+}
+.top_right_main{
+	height: 100%;
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top_right_main_img{
+	height: 90%;
+	width: 46%;
+	border-radius: 10000%;
+	cursor: pointer;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: .3rem solid black;
+	filter: grayscale(425deg);
+}
+.top_right_main_img:hover{
+	opacity: .3;
+}
+.top_right_main_img img{
+	height: 100%;
+	width: 100%;
+}
+.move{
+	height: 75vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.move_main{
+	width: 70%;
+	height: 100%;
+	background-color: white;
+	position: relative;
+	overflow: hidden;
+}
+.move_ul{
+	display: flex;
+	width: 300%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	transition: .4s ease-out;
+}
+.move_li{
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 80%;
+}
+.move_li:nth-of-type(1){
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/wallhaven-4lmv3r.jpg);
+	background-repeat: no-repeat;
+	filter: contrast(10000%);
+}
+.move_li:nth-of-type(2){
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/wallhaven-13edvw.jpg);
+	background-repeat: no-repeat;
+	filter: contrast(10000%);
+}
+.move_li:nth-of-type(3){
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/wallhaven-47w983.jpg);
+	background-repeat: no-repeat;
+	filter: contrast(1000%) hue-rotate(190deg);
+}
+.move_left{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	height: 6vh;
+	width: 2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+}
+.move_right{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	height: 6vh;
+	width: 2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+}
+.move_btn{
+	opacity: 0;
+	cursor: pointer;
+	border-radius: .3em;
+	text-shadow: 2px 2px 2px slategray;
+}
+.about{
+	height: 40vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+.about::after{
+	content: '';
+	position: absolute;
+	display: block;
+	height: 200px;
+	width: 200px;
+	background-color: black;
+	z-index: 0;
+	rotate: 19deg;
+	left: 20%;
+	box-shadow: 1px 1px 10px blue;
+	filter: blur(40px);
+}
+.about::before{
+	content: '';
+	position: absolute;
+	display: block;
+	height: 240px;
+	width: 240px;
+	background-color: white;
+	z-index: 1;
+	left: 20.3%;
+	rotate: 19deg;
+}
+.about_main{
+	width: 70%;
+	height:  70%;
+	position: relative;
+	z-index: 1;
+}
+@font-face {
+	font-family:dt;
+	src: url('../font/DEATHNOTEFont.ttf');
+}
+.about_head{
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5em;
+	font-family: 'dt';
+}
+.about_content{
+	height: 70%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.about_content_text{
+	height: 70%;
+	width: 70%;
+	font-size: 1.3em;
+	text-align: center;	
+	font-family: perpetua;
+	opacity: .7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.server{
+	width: 100%;
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.server_main{
+	height: 70vh;
+	width: 70%;
+}
+.server_h1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4em;
+	font-family: dt;
+	height: 10vh;
+}
+.server_content{
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.server_ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+.server_li{
+	position: absolute;
+	height: 80%;
+	width: 27%;
+	left: 10%;
+	top: 2%;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+	box-shadow: -4px 4px 10px black;
+}
+.server_li:nth-of-type(1){
+	background: url(../img/wallhaven-4gqygq.jpg) no-repeat;
+	background-position: right;
+	background-size: 240%;
+}
+.server_li:nth-of-type(2){
+	background: url(../img/wallhaven-1jwgjv.jpg) center no-repeat;
+	background-size: 240%;
+}
+.server_li:nth-of-type(3){
+	background: url(../img/wallhaven-6koj27.jpg) center no-repeat;
+	background-size: 280%;
+	filter: contrast(200%);
+}
+.server_li_addClass{
+	opacity: 1 !important;
+}
+.server_ul::after{
+	content: '';
+	display: block;
+	height: 90%;
+	width: 30%;
+	border-radius: 15px;
+	color: royalblue;
+	background-color: silver;
+	z-index: -1;
+}
+.server_ul_btn{
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	z-index: 2;
+	height: 2vh;
+	width: 3vw;
+	bottom: 20%;
+	left: 13%;
+	opacity: .6;
+}
+.server_li_btn{
+	height: 1vh;
+	width: 1vh;
+	background-color: white;
+	border-radius: 1000px;
+	cursor: pointer;
+}
+.server_fortion{
+	height: 60%;
+	width: 55%;
+	background-color: black;
+	position: absolute;
+	top: 28%;
+	left: 35%;
+	opacity: 0;
+	border-radius: 20px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s ease-out;
+}
+.add_server_fortion{
+	top: 8%;
+	opacity: .4;
+}
+.server_fortion p{
+	width: 80%;
+	font-size: .8em;
+	text-align: center;
+	font-family: shruti;
+}
+.img_content{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.img_content_main{
+	width: 70%;
+	height: 80%;
+}
+.img_content_h1{
+	font-size: 4em;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: dt;
+}
+.content_left_right{
+	display: flex;
+	justify-content: center;
+	height: 80%;
+	width: 100%;
+	position: relative;
+}
+.img_content_left{
+	width: 40%;
+	height: 100%;
+	background-color: skyblue;
+	background: url(../img/wallhaven-0jv1rq.jpg) center;
+	background-size: 230%;
+	filter:  grayscale(100%) brightness(50%);
+	cursor: pointer;
+	transition: .6s ease;
+	opacity: 0;
+	position: relative;
+	left: -10%;
+}
+.add_img_content_left{
+	left: 0;
+	opacity: 1;
+}
+.img_content_left:hover{
+	filter:  grayscale(0%) brightness(100%) hue-rotate(-120deg);
+}
+.img_content_right{
+	display: flex;
+	height: 100%;
+	width: 60%;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+	transition: .6s ease;
+	position: relative;
+	left: 10%;
+	opacity: 0;
+}
+.add_img_content_right{
+	left: 0;
+	opacity: 1;
+}
+.img_cotent_right_li{
+	height: 50%;
+	width: 50%;
+	filter: contrast(1000%) grayscale(100%) brightness(50%);
+	cursor: pointer;
+	transition: .2s ease-out;
+}
+.img_cotent_right_li:hover{
+	filter: contrast(1000%) grayscale(100%) brightness(100%);
+}
+.img_cotent_right_li:nth-of-type(1){
+	background: url(../img/wallhaven-8xdxd2.jpg) no-repeat 30% 50%;
+	background-size: 500%;
+}
+.img_cotent_right_li:nth-of-type(2){
+	background: url(../img/wallhaven-8xdxd2.jpg) no-repeat 0% 60%;
+	background-size: 600%;
+}
+.img_cotent_right_li:nth-of-type(3){
+	background: url(../img/wallhaven-8xdxd2.jpg) no-repeat 50% 0%;
+	background-size: 600%;
+}
+.img_cotent_right_li:nth-of-type(4){
+	background: url(../img/wallhaven-8xdxd2.jpg) no-repeat 80% 60%;
+	background-size: 600%;
+}
+.video_content{
+	height: 90vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.video_content_main{
+	height: 80vh;
+	width: 70%;
+}
+.video_content_main_h1{
+	font-size: 4em;
+	height: 20%;
+	font-family: dt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.video_content_box{
+	height: 80%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.video{
+	height: 100%;
+	width:  40%;
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	position: relative;
+	z-index: 3;
+}
+.video video{
+	width: 100%;
+	height: 100%;
+	filter: contrast(400%) grayscale(100%);
+}
+.video_img_left{
+	width: 30%;
+	height: 100%;
+	background: url(../img/wallhaven-6ozkrw.jpg) center no-repeat;
+	background-size: 200%;
+	filter: contrast(2500%) grayscale(100%);
+	position: relative;
+	left: 10%;
+	transition: .5s ease-out;
+	opacity: 0;
+}
+.video_img_right{
+	width: 30%;
+	height: 100%;
+	background: url(../img/wallhaven-76rvw3.jpg) center no-repeat;
+	background-size: 120%;
+	filter: contrast(3000%) grayscale(100%);
+	position: relative;
+	left: -10%;
+	transition: .5s ease-out;
+	opacity: 0;
+}
+.add_video_img{
+	left: 0;
+	opacity: 1;
+}
+.contact{
+	height: 80vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact_w{
+	width: 70%;
+	height: 70vh;
+}
+.contact_h1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4em;
+	font-family: dt;
+	height: 20%;
+}
+.contact_box{
+	height: 80%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact_left{
+	height: 50%;
+	width: 30%;
+	background-color: black;
+	position: relative;
+	left: 10%;
+	z-index: 2;
+}
+.contact_left_h1{
+	color: white;
+	height: 20%;
+	font-size: 2em;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: dt;
+}
+.contact_left_text{
+	width: 100%;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact_left_p{
+	color: white;
+	text-align: center;
+	width: 60%;
+	height: 100%;
+	font-family: helvetica;
+	font-family: sylfaen;
+}
+.contact_right{
+	height: 80%;
+	width: 70%;
+	background-color: silver;
+	display: flex;
+	justify-content: end;
+}
+.contact_right_w{
+	width: 80%;
+	height: 100%;
+	display: flex;
+}
+.contactR_left{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+.contactR_left_int{
+	height: 60%;
+	width: 90%;
+	display: flex;
+	flex-flow: wrap;
+}
+.contactR_left_int input{
+	display: block;
+	width: 70%;
+	height: 15%;
+	text-indent: 1em;
+	font-size: 1em;
+	font-family: tunga;
+	border-bottom: 1px solid white;
+	color: white;
+	background-color: rgb(0,0,0,0);
+	-moz-user-select: text;
+}
+.contactR_btn{
+	width: 50%;
+	height: 10%;
+	cursor: pointer;
+	border-radius: .4em;
+	font-family: courier;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contactR_btn:active{
+	color: white;
+	background-color: black;
+}
+.contactR_right{
+	width: 50%;
+	height: 100%;
+	background: url(../img/wallhaven-439yz6.jpg) center no-repeat;
+	background-size: 250%;
+	filter: contrast(300%) grayscale(100%);
+}
+.foot{
+	height: 40vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+}
+.foot_w{
+	height: 30vh;
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.foot_part{
+	width: 20%;
+	height: 100%;
+}
+@font-face {
+	font-family:rr;
+	src: url(../font/Road-Rage-1.otf);
+}
+.foot_top{
+	height: 20%;
+	width: 70%;
+	display: flex;
+	align-items: center;
+	font-family: rr;
+	color: white;
+	font-size: 1rem;
+}
+.foot_p{
+	height: 30%;
+	width: 100%;
+	color: white;
+	font-size: .8em;
+	text-indent: 2em;
+	font-family: "franklin gothic book";
+	font-style: italic;
+	display: flex;
+	align-items: center;
+}
+.foot_ul{
+	height: 60%;
+	width: 100%;
+	display: flex;
+	flex-flow: wrap;
+}
+.foot_ul2{
+	height: 100%;
+}
+.foot_li{
+	width: 100%;
+	list-style: inside;
+	color: white;
+	font-family: haettenschweiler;
+	cursor: pointer;
+}
+.foot_li:hover{
+	opacity: .7;
+}
+.foot_ul2{
+	height: 80%;
+	width: 100%;
+	display: flex;
+	flex-flow: wrap;
+	align-items: center;
+}
+.foot_ul2 .foot_li{
+	height: 3%;
+	list-style-type: square;
+}
+.foot_top2{
+	height: 40%;
+	width: 70%;
+	display: flex;
+	font-family: rr;
+	color: white;
+	font-size: 1rem;
+}
+.foot_img{
+	width: 100%;
+	height: 60%;
+	background: url(../img/wallhaven-1je359.jpg) left no-repeat;
+	background-size:130%;
+}
+.end{
+	background-color: black;
+	color: white;
+	font-size: .8em;
+	display: flex;
+	justify-content: center;
+	font-family: "century gothic";
+}
